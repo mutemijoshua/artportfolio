@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
+/*
+  Design tokens. Change the colours here and the whole site follows.
+  "wall" is the page background — think gallery wall, not white paper.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --wall: #eceee9;
+  --ink: #1e211d;
+  --muted: #62665f;
+  --line: #cdd1ca;
+  --accent: #2d3fc8; /* ultramarine — links and keyboard focus only */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --wall: #1b1c1a;
+    --ink: #e7e8e3;
+    --muted: #9da097;
+    --line: #353733;
+    --accent: #95a1ff;
   }
 }
 
+/* Makes the tokens usable as Tailwind classes: bg-wall, text-ink, border-line… */
+@theme inline {
+  --color-wall: var(--wall);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --font-serif: "Newsreader Variable", Georgia, serif;
+  --font-sans: "Public Sans Variable", system-ui, sans-serif;
+}
+
+html {
+  background: var(--wall);
+  color: var(--ink);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--wall);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
