@@ -27,7 +27,8 @@ export const metadata: Metadata = {
 // appears on all pages; `children` is the page being visited.
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en">
+    // data-palette picks the colour scheme defined in globals.css
+    <html lang="en" data-palette={site.palette}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"

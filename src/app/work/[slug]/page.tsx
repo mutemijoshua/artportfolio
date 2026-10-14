@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 
 import { getAllArtworks, getArtwork, getNeighbours } from "@/lib/artworks";
 import { Lightbox } from "@/components/Lightbox";
-import { site } from "@/content/site";
+import { site, whatsappLink } from "@/content/site";
 
 // Build one page for every artwork at build time (fast, static HTML).
 export function generateStaticParams() {
@@ -77,15 +77,24 @@ export default async function ArtworkPage({ params }: PageProps<"/work/[slug]">)
           )}
 
           {artwork.status === "Available" && (
-            <p className="mt-6 text-sm">
+            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm">
+              {/* Opens a WhatsApp chat with a message about this piece already typed */}
+              <a
+                href={whatsappLink(`Hi ${site.name}, I'm interested in "${artwork.title}" (${artwork.year}).`)}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-accent px-5 py-2.5 font-medium text-wall hover:opacity-90"
+              >
+                Ask about this piece on WhatsApp
+              </a>
               {/* Opens the visitor's email app with the subject already filled in */}
               <a
                 href={`mailto:${site.email}?subject=${encodeURIComponent(`Enquiry: ${artwork.title}`)}`}
                 className="text-accent underline underline-offset-4"
               >
-                Ask about this piece
+                or by email
               </a>
-            </p>
+            </div>
           )}
         </div>
       </div>

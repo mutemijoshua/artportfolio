@@ -19,7 +19,7 @@ export function ArtworkCard({ artwork, eager = false }: { artwork: Artwork; eage
         className="h-auto w-full transition-opacity duration-300 group-hover:opacity-90"
       />
       <div className="mt-3 text-sm leading-snug">
-        <p className="font-serif text-lg italic">{artwork.title}</p>
+        <p className="font-serif text-lg italic group-hover:text-accent">{artwork.title}</p>
         <p className="text-muted">
           {artwork.medium}, {artwork.year}
           {artwork.status === "Sold" && <span> · Sold</span>}

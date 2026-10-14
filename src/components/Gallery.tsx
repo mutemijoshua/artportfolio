@@ -53,7 +53,7 @@ function FilterButton({
       aria-pressed={active}
       className={
         active
-          ? "text-ink underline decoration-1 underline-offset-[6px]"
+          ? "text-ink underline decoration-accent decoration-2 underline-offset-[6px]"
           : "text-muted hover:text-ink"
       }
     >

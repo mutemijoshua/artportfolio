@@ -1,28 +1,76 @@
 @import "tailwindcss";
 
 /*
-  Design tokens. Change the colours here and the whole site follows.
-  "wall" is the page background — think gallery wall, not white paper.
+  Colour palettes.
+  Pick one in src/content/site.ts → `palette`. The choice is written onto the
+  <html> tag as data-palette="…", and the matching block below applies.
+
+  Each palette has five colours:
+    --wall    page background (think painted gallery wall)
+    --ink     main text
+    --muted   secondary text: captions, inactive links
+    --line    thin dividing rules
+    --accent  links, active states, keyboard focus
+
+  To tweak a palette, change its hex values. To make a new one, copy a block,
+  rename it, and add the name to the Palette type in site.ts.
 */
-:root {
-  --wall: #eceee9;
-  --ink: #1e211d;
-  --muted: #62665f;
-  --line: #cdd1ca;
-  --accent: #2d3fc8; /* ultramarine — links and keyboard focus only */
+
+/* Malachite — deep green, like a museum's painted wall */
+:root,
+[data-palette="malachite"] {
+  --wall: #cfe1d3;
+  --ink: #12302a;
+  --muted: #3d574e;
+  --line: #a6c2ad;
+  --accent: #07613f;
 }
 
+/* Indigo — night blue with a sunset-orange accent */
+[data-palette="indigo"] {
+  --wall: #d6d9f1;
+  --ink: #1a1d47;
+  --muted: #474b7a;
+  --line: #b1b5df;
+  --accent: #a3360a;
+}
+
+/* Ochre — warm sun-baked yellow with a deep blue accent */
+[data-palette="ochre"] {
+  --wall: #efcf8c;
+  --ink: #2a1c0c;
+  --muted: #5a4222;
+  --line: #d4ad5c;
+  --accent: #1c5c87;
+}
+
+/* Dark versions, used when the visitor's device is in dark mode */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --wall: #1b1c1a;
-    --ink: #e7e8e3;
-    --muted: #9da097;
-    --line: #353733;
-    --accent: #95a1ff;
+  :root,
+  [data-palette="malachite"] {
+    --wall: #0f2620;
+    --ink: #eaf0e4;
+    --muted: #9cb7ab;
+    --line: #24453b;
+    --accent: #f0b03c;
+  }
+  [data-palette="indigo"] {
+    --wall: #14173a;
+    --ink: #ecebf8;
+    --muted: #a2a5cf;
+    --line: #2b2f60;
+    --accent: #ffb454;
+  }
+  [data-palette="ochre"] {
+    --wall: #261c10;
+    --ink: #f5e8cc;
+    --muted: #c0a67a;
+    --line: #47361f;
+    --accent: #7ec3e6;
   }
 }
 
-/* Makes the tokens usable as Tailwind classes: bg-wall, text-ink, border-line… */
+/* Makes the colours usable as Tailwind classes: bg-wall, text-ink, border-line… */
 @theme inline {
   --color-wall: var(--wall);
   --color-ink: var(--ink);

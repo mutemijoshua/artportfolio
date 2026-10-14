@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -10,7 +11,16 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-8 sm:pt-20">
       <div className="grid gap-12 lg:grid-cols-[1fr_2fr]">
-        <h1 className="font-serif text-5xl tracking-tight sm:text-6xl">About</h1>
+        <div>
+          <h1 className="font-serif text-5xl tracking-tight sm:text-6xl">About</h1>
+          <Image
+            src={site.photo}
+            alt={site.photoAlt}
+            placeholder="blur"
+            sizes="(min-width: 1024px) 320px, 70vw"
+            className="mt-8 aspect-[4/5] w-full max-w-xs rounded-md object-cover ring-1 ring-line"
+          />
+        </div>
 
         <div>
           <div className="max-w-[62ch] space-y-5 font-serif text-xl leading-relaxed">
