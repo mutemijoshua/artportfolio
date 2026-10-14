@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "@fontsource-variable/newsreader";
-import "@fontsource-variable/newsreader/opsz-italic.css";
-import "@fontsource-variable/public-sans";
+import "@fontsource-variable/cormorant-garamond";
+import "@fontsource-variable/cormorant-garamond/wght-italic.css";
+import "@fontsource-variable/jost";
 import "./globals.css";
 
 import { site } from "@/content/site";
@@ -13,7 +13,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: site.name,
+    default: `${site.name} — ${site.tagline}`,
     template: `%s — ${site.name}`, // e.g. "Red Soil — Your Name"
   },
   description: site.description,
@@ -27,12 +27,11 @@ export const metadata: Metadata = {
 // appears on all pages; `children` is the page being visited.
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    // data-palette picks the colour scheme defined in globals.css
-    <html lang="en" data-palette={site.palette}>
+    <html lang="en">
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-wall focus:px-3 focus:py-2"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-paper focus:px-3 focus:py-2"
         >
           Skip to content
         </a>

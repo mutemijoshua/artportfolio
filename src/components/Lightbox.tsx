@@ -30,7 +30,7 @@ export function Lightbox({ image, alt, title }: { image: StaticImageData; alt: s
         ref={dialogRef}
         onClick={() => dialogRef.current?.close()}
         aria-label={title}
-        className="m-0 h-dvh max-h-none w-dvw max-w-none cursor-zoom-out bg-wall p-0 backdrop:bg-wall"
+        className="m-0 h-dvh max-h-none w-dvw max-w-none cursor-zoom-out bg-charcoal p-0 backdrop:bg-charcoal"
       >
         <div className="flex h-full w-full items-center justify-center p-4 sm:p-10">
           <Image
@@ -44,7 +44,7 @@ export function Lightbox({ image, alt, title }: { image: StaticImageData; alt: s
         <button
           type="button"
           onClick={() => dialogRef.current?.close()}
-          className="absolute right-4 top-4 bg-wall px-3 py-1 text-sm text-ink"
+          className="absolute right-4 top-4 px-3 py-1 text-xs uppercase tracking-[0.2em] text-chalk ring-1 ring-chalk/40 hover:ring-chalk"
         >
           Close
         </button>

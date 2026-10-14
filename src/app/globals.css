@@ -1,94 +1,62 @@
 @import "tailwindcss";
 
 /*
-  Colour palettes.
-  Pick one in src/content/site.ts → `palette`. The choice is written onto the
-  <html> tag as data-palette="…", and the matching block below applies.
+  Colours. Change a hex value here and the whole site follows.
 
-  Each palette has five colours:
-    --wall    page background (think painted gallery wall)
-    --ink     main text
-    --muted   secondary text: captions, inactive links
-    --line    thin dividing rules
-    --accent  links, active states, keyboard focus
-
-  To tweak a palette, change its hex values. To make a new one, copy a block,
-  rename it, and add the name to the Palette type in site.ts.
+  The site alternates light "paper" sections with dark "charcoal" sections,
+  like walls in a gallery. One deep red accent is used for buttons and links.
 */
+:root {
+  --paper: #faf9f6; /* main light background */
+  --stone: #efece6; /* alternate light background for some sections */
+  --ink: #1a1917; /* main text on light backgrounds */
+  --muted: #69645c; /* secondary text on light backgrounds */
+  --line: #dcd7ce; /* thin rules on light backgrounds */
 
-/* Malachite — deep green, like a museum's painted wall */
-:root,
-[data-palette="malachite"] {
-  --wall: #cfe1d3;
-  --ink: #12302a;
-  --muted: #3d574e;
-  --line: #a6c2ad;
-  --accent: #07613f;
+  --charcoal: #1d1c1a; /* dark sections, top bar, footer */
+  --chalk: #f3f0ea; /* text on dark backgrounds */
+  --chalk-muted: #aaa49a; /* secondary text on dark backgrounds */
+  --charcoal-line: #3a3834; /* thin rules on dark backgrounds */
+
+  --accent: #a3271f; /* buttons, links, focus — a deep earth red */
+  --accent-light: #e0806f; /* accent on dark backgrounds */
 }
 
-/* Indigo — night blue with a sunset-orange accent */
-[data-palette="indigo"] {
-  --wall: #d6d9f1;
-  --ink: #1a1d47;
-  --muted: #474b7a;
-  --line: #b1b5df;
-  --accent: #a3360a;
-}
-
-/* Ochre — warm sun-baked yellow with a deep blue accent */
-[data-palette="ochre"] {
-  --wall: #efcf8c;
-  --ink: #2a1c0c;
-  --muted: #5a4222;
-  --line: #d4ad5c;
-  --accent: #1c5c87;
-}
-
-/* Dark versions, used when the visitor's device is in dark mode */
-@media (prefers-color-scheme: dark) {
-  :root,
-  [data-palette="malachite"] {
-    --wall: #0f2620;
-    --ink: #eaf0e4;
-    --muted: #9cb7ab;
-    --line: #24453b;
-    --accent: #f0b03c;
-  }
-  [data-palette="indigo"] {
-    --wall: #14173a;
-    --ink: #ecebf8;
-    --muted: #a2a5cf;
-    --line: #2b2f60;
-    --accent: #ffb454;
-  }
-  [data-palette="ochre"] {
-    --wall: #261c10;
-    --ink: #f5e8cc;
-    --muted: #c0a67a;
-    --line: #47361f;
-    --accent: #7ec3e6;
-  }
-}
-
-/* Makes the colours usable as Tailwind classes: bg-wall, text-ink, border-line… */
+/* Makes the colours usable as Tailwind classes: bg-paper, text-ink, border-line… */
 @theme inline {
-  --color-wall: var(--wall);
+  --color-paper: var(--paper);
+  --color-stone: var(--stone);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-line: var(--line);
+  --color-charcoal: var(--charcoal);
+  --color-chalk: var(--chalk);
+  --color-chalk-muted: var(--chalk-muted);
+  --color-charcoal-line: var(--charcoal-line);
   --color-accent: var(--accent);
-  --font-serif: "Newsreader Variable", Georgia, serif;
-  --font-sans: "Public Sans Variable", system-ui, sans-serif;
+  --color-accent-light: var(--accent-light);
+  --font-serif: "Cormorant Garamond Variable", Georgia, serif;
+  --font-sans: "Jost Variable", system-ui, sans-serif;
 }
 
 html {
-  background: var(--wall);
+  background: var(--paper);
   color: var(--ink);
 }
 
 body {
   font-family: var(--font-sans);
+  font-weight: 350;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Large uppercase serif headings, used for the name and section titles */
+.display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.05;
 }
 
 :focus-visible {
@@ -98,7 +66,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: var(--wall);
+  color: var(--paper);
 }
 
 @media (prefers-reduced-motion: reduce) {

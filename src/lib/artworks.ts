@@ -12,6 +12,12 @@ export function getArtwork(slug: string): Artwork | undefined {
   return artworks.find((a) => a.slug === slug);
 }
 
+/** Pieces marked `featured: true`, or the first three if none are marked. */
+export function getFeatured(): Artwork[] {
+  const featured = artworks.filter((a) => a.featured);
+  return featured.length > 0 ? featured : artworks.slice(0, 3);
+}
+
 /** The pieces before and after this one, for the "previous / next" links. */
 export function getNeighbours(slug: string) {
   const i = artworks.findIndex((a) => a.slug === slug);

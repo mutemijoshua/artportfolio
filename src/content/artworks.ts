@@ -36,6 +36,8 @@ export type Artwork = {
   description?: string[];
   /** Optional: "Available", "Sold", "Private collection"… */
   status?: string;
+  /** Show this piece in "Selected work" on the home page (pick about three). */
+  featured?: boolean;
   image: StaticImageData;
 };
 
@@ -56,6 +58,7 @@ export const artworks: Artwork[] = [
   },
   {
     slug: "market-noon",
+    featured: true,
     title: "Market, Noon",
     year: 2026,
     medium: "Acrylic on canvas",
@@ -66,6 +69,7 @@ export const artworks: Artwork[] = [
   },
   {
     slug: "tide-study",
+    featured: true,
     title: "Tide Study",
     year: 2025,
     medium: "Gouache on paper",
@@ -76,6 +80,7 @@ export const artworks: Artwork[] = [
   },
   {
     slug: "red-soil",
+    featured: true,
     title: "Red Soil",
     year: 2025,
     medium: "Oil on board",

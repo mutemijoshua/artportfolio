@@ -4,22 +4,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { isActive } from "@/lib/nav";
 
 export function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   const pathname = usePathname();
-  // "Work" is active on the home page and on every /work/... page.
-  const active =
-    href === "/" ? pathname === "/" || pathname.startsWith("/work") : pathname.startsWith(href);
+  const active = isActive(pathname, href);
 
   return (
     <Link
       href={href}
       aria-current={active ? "page" : undefined}
-      className={
-        active
-          ? "text-ink underline decoration-accent decoration-2 underline-offset-[6px]"
-          : "text-muted hover:text-ink"
-      }
+      className={`border-b py-1 text-[13px] uppercase tracking-[0.2em] transition-colors ${
+        active ? "border-accent text-ink" : "border-transparent text-muted hover:text-ink"
+      }`}
     >
       {children}
     </Link>

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+
 import { site, whatsappLink } from "@/content/site";
+import { ButtonLink, PageHeader } from "@/components/ui";
+import { SocialIcon } from "@/components/SocialIcons";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -8,53 +11,52 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-8 sm:pt-20">
-      <div className="grid gap-12 lg:grid-cols-[1fr_2fr]">
-        <h1 className="font-serif text-5xl tracking-tight sm:text-6xl">Contact</h1>
+    <>
+      <PageHeader
+        title="Contact"
+        intro="For buying work, commissions, shows or press, message me on WhatsApp or send an email. I usually reply within a day or two."
+      />
 
-        <div className="max-w-[62ch]">
-          <p className="font-serif text-xl leading-relaxed">
-            For commissions, buying work, or showing it, message me on WhatsApp or send an email.
-            I usually reply within a day or two.
-          </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            {/* Opens WhatsApp (app on phones, WhatsApp Web on computers) with a chat to you */}
-            <a
-              href={whatsappLink(`Hi ${site.name}, I saw your work on your website.`)}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-accent px-6 py-3 text-base font-medium text-wall hover:opacity-90"
-            >
-              Message on WhatsApp
-            </a>
-            <a
-              href={`mailto:${site.email}`}
-              className="rounded-full px-6 py-3 text-base ring-1 ring-ink/30 hover:ring-ink"
-            >
-              Send an email
-            </a>
+      <section className="mx-4 my-20 grid max-w-5xl gap-px bg-line sm:my-28 md:grid-cols-2 lg:mx-auto">
+        <div className="bg-paper p-10 text-center sm:p-14">
+          <div className="mx-auto w-fit text-accent">
+            <SocialIcon platform="whatsapp" size={32} />
           </div>
-
-          <p className="mt-4 break-all text-sm text-muted">{site.email}</p>
-
-          {site.socials.length > 0 && (
-            <section className="mt-14">
-              <h2 className="font-serif text-2xl">Follow the work</h2>
-              <ul className="mt-4 border-t border-line text-sm">
-                {site.socials.map((s) => (
-                  <li key={s.href} className="flex justify-between gap-4 border-b border-line py-3">
-                    <span className="text-muted">{s.label}</span>
-                    <a href={s.href} target="_blank" rel="noreferrer" className="hover:text-accent">
-                      {s.href.replace(/^https?:\/\/(www\.)?/, "")}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+          <h2 className="mt-6 font-serif text-3xl">WhatsApp</h2>
+          <p className="mt-3 text-muted">The quickest way to reach me.</p>
+          <div className="mt-8">
+            <ButtonLink href={whatsappLink(`Hi ${site.name}, I saw your work on your website.`)} external>
+              Message on WhatsApp
+            </ButtonLink>
+          </div>
         </div>
-      </div>
-    </div>
+        <div className="bg-paper p-10 text-center sm:p-14">
+          <p className="font-serif text-4xl leading-none text-accent">@</p>
+          <h2 className="mt-6 font-serif text-3xl">Email</h2>
+          <p className="mt-3 break-all text-muted">{site.email}</p>
+          <div className="mt-8">
+            <ButtonLink href={`mailto:${site.email}`} variant="outline">
+              Send an email
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
+
+      {site.socials.length > 0 && (
+        <section className="mx-auto max-w-5xl px-4 pb-20 text-center sm:px-8 sm:pb-28">
+          <h2 className="display text-2xl sm:text-3xl">Follow the work</h2>
+          <ul className="mt-10 flex flex-wrap justify-center gap-x-10 gap-y-6">
+            {site.socials.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-accent">
+                  <SocialIcon platform={s.platform} size={22} />
+                  <span className="text-sm uppercase tracking-[0.2em]">{s.label}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </>
   );
 }

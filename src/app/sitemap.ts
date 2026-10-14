@@ -4,7 +4,7 @@ import { site } from "@/content/site";
 import { getAllArtworks } from "@/lib/artworks";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/about", "/contact"].map((path) => ({ url: `${site.url}${path}` }));
+  const pages = ["", "/gallery", "/about", "/commissions", "/contact"].map((path) => ({ url: `${site.url}${path}` }));
   const works = getAllArtworks().map((a) => ({ url: `${site.url}/work/${a.slug}` }));
   return [...pages, ...works];
 }

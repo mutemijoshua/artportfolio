@@ -13,7 +13,7 @@ export function Gallery({ artworks, series }: { artworks: Artwork[]; series: str
   return (
     <>
       {series.length > 1 && (
-        <div role="group" aria-label="Filter by series" className="mb-10 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <div role="group" aria-label="Filter by series" className="mb-12 flex flex-wrap justify-center gap-x-8 gap-y-3 text-[13px] uppercase tracking-[0.2em]">
           <FilterButton active={selected === null} onClick={() => setSelected(null)}>
             All work
           </FilterButton>
@@ -53,8 +53,8 @@ function FilterButton({
       aria-pressed={active}
       className={
         active
-          ? "text-ink underline decoration-accent decoration-2 underline-offset-[6px]"
-          : "text-muted hover:text-ink"
+          ? "border-b border-accent pb-1 text-ink"
+          : "border-b border-transparent pb-1 text-muted hover:text-ink"
       }
     >
       {children}
