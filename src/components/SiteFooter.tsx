@@ -2,13 +2,21 @@ import Link from "next/link";
 import { site, whatsappLink } from "@/content/site";
 import { navItems } from "@/lib/nav";
 import { SocialIcons } from "./SocialIcons";
-
+import Image from "next/image";
+import logo from "@/content/images/logo.png";
 export function SiteFooter() {
   return (
     <footer className="bg-charcoal text-chalk">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-8 md:grid-cols-[2fr_1fr_1fr]">
         <div>
-          <p className="display text-3xl tracking-[0.16em]">{site.name}</p>
+        <Link href="/" className="inline-block">
+        <Image
+          src={logo}
+          alt={`${site.name} logo`}
+          className="h-16 w-auto"
+        />
+        </Link>
+          <p className="display mt-4 text-2xl tracking-[0.16em]">{site.name}</p>
           {site.footerQuote && (
             <p className="mt-5 max-w-sm font-serif text-xl italic text-chalk-muted">“{site.footerQuote}”</p>
           )}
@@ -48,7 +56,7 @@ export function SiteFooter() {
 
       <div className="border-t border-charcoal-line">
         <p className="mx-auto max-w-7xl px-4 py-6 text-xs text-chalk-muted sm:px-8">
-          © {site.name}. All artwork is the property of the artist and may not be reproduced without permission.
+          © {site.name}. All rights reserved 2026.
         </p>
       </div>
     </footer>

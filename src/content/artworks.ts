@@ -10,14 +10,14 @@
 
 import type { StaticImageData } from "next/image";
 
-import tideStudy from "./images/tide-study.jpg";
-import marketNoon from "./images/market-noon.jpg";
-import redSoil from "./images/red-soil.jpg";
-import nightMatatu from "./images/night-matatu.jpg";
-import acaciaLine from "./images/acacia-line.jpg";
-import rainWindow from "./images/rain-window.jpg";
-import indigoCloth from "./images/indigo-cloth.jpg";
-import saltFlats from "./images/salt-flats.jpg";
+import mammito from "./images/mammito.jpg";
+import ikigai from "./images/ikigai.jpg";
+import kunfayakun from "./images/kun_faya_kun.jpg";
+import serenity from "./images/serenity.jpg";
+import surrender from "./images/surrender.jpg";
+import obama from "./images/obama.jpg";
+import pele from "./images/pele.jpg";
+import mbappe from "./images/mbappe.jpg";
 
 export type Artwork = {
   /** Used in the URL: /work/<slug>. Lowercase, words joined with hyphens, must be unique. */
@@ -43,89 +43,90 @@ export type Artwork = {
 
 export const artworks: Artwork[] = [
   {
-    slug: "night-matatu",
-    title: "Night Matatu",
+    slug: "serenity",
+    title: "Serenity",
     year: 2026,
-    medium: "Acrylic on canvas",
-    dimensions: "75 × 105 cm",
-    series: "Paintings",
-    alt: "Looping dark lines over a warm yellow field with deep navy blocks and small turquoise shapes.",
+    medium: "Charcoal & accrylic ",
+    dimensions: "29 × 45 cm",
+    series: "Mixed media",
+    alt: "",
     description: [
-      "Placeholder text. Write a few sentences about where this piece came from — what you saw, what you were trying to hold on to, and what changed along the way.",
+      "",
     ],
     status: "Available",
-    image: nightMatatu,
+    image: serenity,
   },
   {
-    slug: "market-noon",
+    slug: "ikigai",
     featured: true,
-    title: "Market, Noon",
+    title: "Ikigai",
     year: 2026,
     medium: "Acrylic on canvas",
-    dimensions: "100 × 75 cm",
+    dimensions: "50 × 42 cm",
     series: "Paintings",
-    alt: "Abstract composition of saturated orange, mustard and dark teal shapes with gestural lines.",
-    image: marketNoon,
+    alt: "",
+    image: ikigai,
   },
   {
-    slug: "tide-study",
+    slug: "kun-faya-kun",
     featured: true,
-    title: "Tide Study",
-    year: 2025,
-    medium: "Gouache on paper",
-    dimensions: "32 × 40 cm",
+    title: "Kun faya Kun",
+    year: 2026,
+    medium: "Acrylic on canvas",
+    dimensions: "A5",
     series: "Studies",
-    alt: "Blurred blue and pale aqua shapes crossed by flowing lines, like water at low tide.",
-    image: tideStudy,
+    alt: "",
+    image: kunfayakun,
   },
   {
-    slug: "red-soil",
+    slug: "surrender",
     featured: true,
-    title: "Red Soil",
-    year: 2025,
-    medium: "Oil on board",
-    dimensions: "60 × 60 cm",
+    title: "Surrender",
+    year: 2026,
+    medium: "Acrylic on canvas",
+    dimensions: "50 × 42 cm",
     series: "Paintings",
     alt: "Square composition of rust red, terracotta and sand-coloured forms.",
     status: "Sold",
-    image: redSoil,
+    image: surrender,
   },
   {
-    slug: "acacia-line",
-    title: "Acacia Line",
-    year: 2025,
-    medium: "Ink and wash on paper",
-    dimensions: "42 × 28 cm",
-    series: "Studies",
-    alt: "Wide landscape format with olive and dark green masses and ochre highlights.",
-    image: acaciaLine,
-  },
-  {
-    slug: "rain-window",
-    title: "Rain Window",
+    slug: "obama",
+    title: "Obama",
     year: 2024,
-    medium: "Watercolour on paper",
-    dimensions: "30 × 38 cm",
-    series: "Studies",
+    medium: " on paper",
+    dimensions: "70 × 60 cm",
+    series: "Portraits",
+    alt: "",
+    image: obama,
+  },
+  {
+    slug: "pele",
+    title: "pele",
+    year: 2024,
+    medium: "Charlcoal on paper",
+    
+    series: "Portraits",
     alt: "Soft grey-green and blush shapes with thin lines, like a view through a wet window.",
-    image: rainWindow,
+    image: pele,
   },
   {
-    slug: "indigo-cloth",
-    title: "Indigo Cloth",
-    year: 2024,
-    medium: "Digital",
-    series: "Digital",
+    slug: "mbappe",
+    title: "Mbappe",
+    year: 2025,
+    medium: "Charcoal on paper",
+    series: "Portraits",
+    dimensions: "70 × 60 cm",
     alt: "Square composition of indigo, plum and dusty rose layered shapes.",
-    image: indigoCloth,
+    image: mbappe ,
   },
   {
-    slug: "salt-flats",
-    title: "Salt Flats",
+    slug: "mammito",
+    title: "Mammito",
     year: 2024,
-    medium: "Digital",
-    series: "Digital",
-    alt: "Pale grey wide composition with a few coral accents and fine dark lines.",
-    image: saltFlats,
+    medium: "Charcoal",
+    series: "Portraits",
+    alt: "",
+    image: mammito,
   },
 ];
