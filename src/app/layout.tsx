@@ -4,6 +4,7 @@ import "@fontsource-variable/cormorant-garamond/wght-italic.css";
 import "@fontsource-variable/jost";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/content/site";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
