@@ -25,10 +25,10 @@ export const site = {
   photoAlt: "Portrait of Your Name in the studio",
 
   // The artwork shown large in the home page hero (its slug from artworks.ts).
-  heroArtwork: "night-matatu",
+  heroArtwork: "Serenity",
 
   // ── Contact ───────────────────────────────────────────────
-  email: "joshuamutua@gmail.com",
+  email: "joshuamutua555@gmail.com",
   // WhatsApp number in international format: country code + number,
   // no "+", no spaces, no leading 0.  0712 345 678  →  "254712345678"
   whatsapp: "254742764477",
@@ -45,7 +45,7 @@ export const site = {
   // ── Home page ─────────────────────────────────────────────
   // The "Who is …?" section. Keep it to two short paragraphs.
   intro: [
-    "I'm a painter,Web designer, software develope based in Nairobi. By day I work in tech; in the evenings I gather any of the will power that is left, sit down behind my desk and paint.",
+    "I'm a painter,Web designer, software developer based in Nairobi. By day I work in tech; in the evenings I gather any of the will power that is left, sit down behind my desk and sketch, draw or paint.",
     "My work moves between quick studies on paper and larger pieces on canvas or on paper, and I take on a small number of commissions each year.",
   ],
 
@@ -77,8 +77,9 @@ export const site = {
   // ── About page ────────────────────────────────────────────
   // Each string is one paragraph.
   bio: [
-    "I make paintings during the hours I'm not doing the things artists in a third world country have to do to earn a living. The two practices feed each other more than I expected: both are about building something one small decision at a time, and knowing when to stop.",
-    "Most of the work here starts as quick studies on paper street corners, light through a window, the colour of the soil after rain — and some of it grows into larger pieces on canvas.",
+    "I what you would call a part time artist.During the day I am sitted behind a computer somewhere serving the system.At night I sit behind my desk and serve my dream.All my practices feed each other more than I expected: they are all are about building something one small decision at a time, and knowing when to stop",
+    "My art practice cuts across different mediums but mostly I use charcoal, pencils and acrylics depending on the piece that I am working on",
+    "Most of the work here starts as quick studies on paper and some of it grows into larger pieces on paper or canvas.",
     "I'm open to commissions, collaborations and group shows.",
   ],
 
@@ -91,7 +92,7 @@ export const site = {
   // ── Commissions page ──────────────────────────────────────
   commissions: {
     intro:
-      "I paint a small number of commissions each year — portraits and concept pieces that matter to you, or a piece made for a particular wall.",
+      "I paint a small number of commissions each year, portraits and concept pieces that matter to you, or a piece made for a particular wall.",
     steps: [
       { title: "Get in touch", text: "Message me on WhatsApp or email with what you have in mind, the size, and any photos or references." },
       { title: "Agree the details", text: "We settle the size, medium, price and timeline. A deposit secures your place in the schedule." },
