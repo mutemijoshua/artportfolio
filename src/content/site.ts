@@ -77,8 +77,8 @@ export const site = {
   // ── About page ────────────────────────────────────────────
   // Each string is one paragraph.
   bio: [
-    "I what you would call a part time artist.During the day I am sitted behind a computer somewhere serving the system.At night I sit behind my desk and serve my dream.All my practices feed each other more than I expected: they are all are about building something one small decision at a time, and knowing when to stop",
-    "My art practice cuts across different mediums but mostly I use charcoal, pencils and acrylics depending on the piece that I am working on",
+    "I'm  what you would call a part time artist.During the day, I am sitted behind a computer somewhere serving the system.At night, I sit behind my desk and serve my dream.All my practices feed each other more than I expected: they  are about building something, one small decision at a time,and knowing when to stop.",
+    "My art practice cuts across different mediums, but mostly I use charcoal, pencils and acrylics depending on the piece that I am working on.",
     "Most of the work here starts as quick studies on paper and some of it grows into larger pieces on paper or canvas.",
     "I'm open to commissions, collaborations and group shows.",
   ],
