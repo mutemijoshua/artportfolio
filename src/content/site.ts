@@ -16,7 +16,7 @@ export const site = {
   tagline: "Paintings and drawings crafted from the soul",
   // Used in Google results and link previews.
   description:
-    "Portfolio of Your Name — original paintings, drawings and commissions from Nairobi, Kenya.",
+    " original paintings, drawings and commissions from Nairobi, Kenya.",
   // Your live URL once deployed (used for the sitemap and link previews).
   url: "https://artportfolio-lovat.vercel.app/",
   location: "Nairobi, Kenya",
@@ -60,7 +60,7 @@ export const site = {
   testimonials: [
    
     {
-      quote: "The commission processs was clear and smooth.Delivered perfectly even before the deadline.I highly reccomend",
+      quote: "The commission processs was clear and smooth.Delivered perfectly even before the deadline.I highly recommend",
       name: "Damaris",
       role: "Client",
     },
@@ -72,7 +72,7 @@ export const site = {
   ],
 
   // A short line of yours shown in the footer. Delete the text to hide it.
-  footerQuote: "Every artwork starts as a small decision, and then another..",
+  footerQuote: "Every artwork starts as a small decision, and then another...",
 
   // ── About page ────────────────────────────────────────────
   // Each string is one paragraph.
@@ -92,14 +92,14 @@ export const site = {
   // ── Commissions page ──────────────────────────────────────
   commissions: {
     intro:
-      "I paint a small number of commissions each year, portraits and concept pieces that matter to you, or a piece made for a particular wall.",
+      "I draw a small number of commissions each year, portraits and concept pieces that matter to you, or a piece made for a particular wall.",
     steps: [
       { title: "Get in touch", text: "Message me on WhatsApp or email with what you have in mind, the size, and any photos or references." },
       { title: "Agree the details", text: "We settle the size, medium, price and timeline. A deposit secures your place in the schedule." },
       { title: "Sketch and progress", text: "I share a first sketch for your feedback, then progress photos as the painting develops." },
       { title: "Delivery", text: "Once the final payment is made, the finished piece is delivered in Nairobi or shipped to you." },
     ],
-    note: "Typical turnaround is 3–6 weeks depending on size. Prices on request.",
+    note: "Typical turnaround is 3–6 weeks depending on size. Prices range from 6000 Ksh upwards depending on the size of the artwork.",
   },
 };
 

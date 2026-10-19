@@ -84,7 +84,7 @@ function Intro() {
         </div>
         <div className="mt-10">
           <ButtonLink href="/about" variant="outline">
-            Read more about {site.firstName}
+            Read more
           </ButtonLink>
         </div>
       </div>
