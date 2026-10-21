@@ -19,9 +19,9 @@ import obama from "./images/obama.jpg";
 import pele from "./images/pele.jpg";
 import mbappe from "./images/mbappe.jpg";
 import study1 from "./images/study1.jpg"
-import study2 from "./images/study1.jpg"
-import study3 from "./images/study1.jpg"
-import study4 from "./images/study1.jpg"
+import study2 from "./images/study2.jpg"
+import study3 from "./images/study3.jpg"
+import study4 from "./images/study4.jpg"
 export type Artwork = {
   /** Used in the URL: /work/<slug>. Lowercase, words joined with hyphens, must be unique. */
   slug: string;
