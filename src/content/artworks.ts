@@ -21,6 +21,10 @@ import mbappe from "./images/mbappe.jpg";
 import study1 from "./images/study1.jpg"
 import study2 from "./images/study2.jpg"
 import study3 from "./images/study3.jpg"
+import bipolar from "./images/bipolar.jpg"
+import chains from "./images/chained.jpg"
+import breath from "./images/Just breathe.jpg"
+import hope from "./images/hope....jpg"
 import study4 from "./images/study4.jpg"
 export type Artwork = {
   /** Used in the URL: /work/<slug>. Lowercase, words joined with hyphens, must be unique. */
@@ -90,7 +94,7 @@ export const artworks: Artwork[] = [
     dimensions: "50 × 42 cm",
     series: "Paintings",
     alt: "Square composition of rust red, terracotta and sand-coloured forms.",
-    status: "Sold",
+    status: "Available",
     image: surrender,
   },
   {
@@ -143,7 +147,7 @@ export const artworks: Artwork[] = [
   },
   {
     slug: "Study 2",
-    title: "Portrait study 1",
+    title: "Portrait study 2",
     year: 2026,
     medium: "Acrylic",
     series: "Studies",
@@ -152,7 +156,7 @@ export const artworks: Artwork[] = [
   },
   {
     slug: "Study 3",
-    title: "Portrait study 1",
+    title: "Portrait study 3",
     year: 2026,
     medium: "Acrylic",
     series: "Studies",
@@ -161,11 +165,50 @@ export const artworks: Artwork[] = [
   },
   {
     slug: "Study 4",
-    title: "Portrait study 1",
+    title: "Abstract study",
     year: 2026,
     medium: "Acrylic",
     series: "Studies",
     alt: "",
     image: study4
+  },
+  {
+    slug: "Bipolar",
+    title: "Bipolar",
+    year: 2023,
+    medium: "Acrylic",
+    series: "Concepts",
+    alt: "",
+    status: "Sold",
+    image: bipolar
+  },
+  {
+    slug: "chains",
+    title: "The chains I wear? I bought every one of them myself.",
+    year: 2023,
+    medium: "Acrylic",
+    series: "Concepts",
+    alt: "",
+    status: "Sold",
+    image: chains
+  },
+  {
+    slug: "just_breath",
+    title: "Just Breath",
+    year: 2023,
+    medium: "Acrylic",
+    series: "Concepts",
+    alt: "",
+    image: breath
+  },
+  {
+    slug: "hope",
+    title: "Hope",
+    year: 2023,
+    medium: "Acrylic",
+    series: "Concepts",
+    alt: "",
+    image: hope
   }
+
 ];
