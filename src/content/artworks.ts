@@ -11,7 +11,7 @@
 import type { StaticImageData } from "next/image";
 
 import mammito from "./images/mammito.jpg";
-import ikigai from "./images/ikigai.jpg";
+import ikigai from "./images/ikigai1.jpg";
 import kunfayakun from "./images/kun_faya_kun.jpg";
 import serenity from "./images/serenity.jpg";
 import surrender from "./images/surrender.jpg";
@@ -26,6 +26,7 @@ import chains from "./images/chained.jpg"
 import breath from "./images/Just breathe.jpg"
 import hope from "./images/hope....jpg"
 import study4 from "./images/study4.jpg"
+import sarah from "./images/sarah.jpg"
 export type Artwork = {
   /** Used in the URL: /work/<slug>. Lowercase, words joined with hyphens, must be unique. */
   slug: string;
@@ -209,6 +210,15 @@ export const artworks: Artwork[] = [
     series: "Concepts",
     alt: "",
     image: hope
+  },
+   {
+    slug: "sarah",
+    title: "Pencil Commision",
+    year: 2026,
+    medium: "Pencil",
+    series: "Commisions",
+    alt: "",
+    image: sarah
   }
 
 ];
