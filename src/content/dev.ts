@@ -18,7 +18,7 @@ export const dev = {
   tools: ["WordPress", "Elementor & Kadence", "Next.js", "Python & Django", "Kotlin & Jetpack Compose"],
 
   // ── Client websites (from Sentinel) ─────────────────────────
-  sentinelUrl: "https://sentinel-josh-6df4.vercel.app",
+  sentinelUrl: "https://sentinel-guard-plugin.vercel.app/",
 
   // ── GitHub ──────────────────────────────────────────────────
   githubUser: "mutemijoshua",
