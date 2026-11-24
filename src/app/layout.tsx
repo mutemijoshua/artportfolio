@@ -7,6 +7,7 @@ import "./globals.css";
 import { site } from "@/content/site";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Analytics } from "@vercel/analytics/next";
 
 // Default <title>, description and link-preview info for every page.
 // Individual pages can override parts of this.
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
